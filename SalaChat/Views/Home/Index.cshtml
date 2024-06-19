@@ -1,0 +1,40 @@
+﻿@model Dictionary<int, string>
+
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="container card-container">
+    @foreach(var chat in Model)
+    {
+        if(chat.Key == 1)
+        {
+            <div class="card">
+                <img src="~/imagenes/familia.jpg" class="card-img-top" alt="Grupo A">
+                <div class="card-body card-body-center">
+                    <a class="card-text" asp-controller="Chats" asp-action="Chat" asp-route-idChat="@chat.Key">@chat.Value</a>
+                </div>
+            </div>
+        }
+
+        if (chat.Key == 2)
+        {
+            <div class="card">
+                <img src="~/imagenes/amigos.jpg" class="card-img-top" alt="Grupo B">
+                <div class="card-body card-body-center">
+                    <a class="card-text" asp-controller="Chats" asp-action="Chat" asp-route-idChat="@chat.Key">@chat.Value</a>
+                </div>
+            </div>
+        }
+
+        if (chat.Key == 3)
+        {
+            <div class="card">
+                <img src="~/imagenes/trabajo.jpg" class="card-img-top" alt="Grupo B">
+                <div class="card-body card-body-center">
+                    <a class="card-text" asp-controller="Chats" asp-action="Chat" asp-route-idChat="@chat.Key">@chat.Value</a>
+                </div>
+            </div>
+        }
+    }
+</div>

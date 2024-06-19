@@ -1,0 +1,158 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+.navbar-color {
+    background: #000428; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #004e92, #000428); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.span-usuario {
+    color: white;
+}
+
+.card-img-top {
+    object-fit: cover;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.card {
+    width: 18rem;
+}
+
+.card-body-center {
+    text-align: center;
+}
+
+.card-text {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+
+
+
+.chat-container {
+    margin-top: 3rem;
+}
+
+.title-h1 {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#Mensajes {
+    height: 300px;
+    overflow-y: auto;
+    /* background-color: #f8f9fa;
+  border: 1px solid #dee2e6; */
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+}
+    /* Scrollbar Styles */
+    #Mensajes::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    #Mensajes::-webkit-scrollbar-track {
+        background: #f8f9fa;
+        border-radius: 0.25rem;
+    }
+
+    #Mensajes::-webkit-scrollbar-thumb {
+        background-color: #6c757d;
+        border-radius: 10px;
+        border: 3px solid #f8f9fa;
+    }
+
+        #Mensajes::-webkit-scrollbar-thumb:hover {
+            background-color: #5a6268;
+        }
+
+.list-group-item {
+    margin-bottom: 0.5rem;
+}
+
+.form-container {
+    margin-bottom: 1rem;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.title-image {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    .title-h1 {
+        font-size: 1rem;
+    }
+
+    .title-image {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+    }
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+.content-user {
+    text-align: center;
+}
+
+.title-usuario {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.title-user-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.user-text{
+    margin-top: 10px;
+    text-align: center;
+}

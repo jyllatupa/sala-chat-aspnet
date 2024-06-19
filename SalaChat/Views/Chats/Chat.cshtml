@@ -1,0 +1,87 @@
+﻿@model int
+
+<div class="container chat-container">
+    <div class="row justify-content-center">
+        <div class="col-md-4 content-user">
+            <img src="~/imagenes/familia.jpg" alt="Title Image" class="title-user-image" />
+            @* <div class="title-usuario">Jonathan Yllatupa</div>
+            <input type="hidden" id="user" value="Jonathan Yllatupa"/> *@
+            <div class="title-h1">@SalaChat.Controllers.HomeController.ListaChats.GetValueOrDefault(Model)</div>
+            <div class="user-text">
+                <input class="form-control" type="text" placeholder="Introduzca su Usuario" id="user" />
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="mb-3">
+                <ul class="list-group list-group-flush" id="Mensajes">
+                </ul>
+            </div>
+            <div class="mb-3">
+                <textarea class="form-control" type="text" placeholder="Introduzca su Mensaje" id="message"></textarea>
+            </div>
+            <div class="d-grid gap-2 mb-3">
+                <button id="btnEnviar" type="button" class="btn btn-success">Enviar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@*//Colocamos el script de SignalR para usarlo*@
+<script src="~/lib/microsoft/signalr/dist/browser/signalr.js"></script>
+
+
+@section Scripts {
+    <script>
+
+        $(document).ready(function () {
+            //primero estamos creando el objeto de conexion
+            var conexion = new signalR.HubConnectionBuilder().withUrl("/Chats").build();
+
+            //Despues iniciamos la conexion y nos añadimos al grupo mediante la funcion "AddToGroup"
+            conexion.start().then(() => {
+                conexion.invoke("AddToGroup", "@Model");
+            }).then(() => console.log(conexion));
+
+            //En el momento que demos click, obtenemos los datos de los inputs y lo mandamos mediante
+            //la función "SendMessage"
+            $("#btnEnviar").click(function (e) {
+
+                let room = @Model;
+                let user = $("#user").val();
+                let mensaje = $("#message").val();
+
+                conexion.invoke('SendMessage', room, user, mensaje);
+
+                $("#message").val("");
+                $("#message").focus();
+
+                //Para que no recargue la pagina
+                e.preventDefault();
+            });
+
+
+            //Si la conexion esta activa y un mensaje se manda, se activa la funcion "RecibirMensaje"
+            //y nos mostrara en tiempo real el mensaje y el usuario
+            conexion.on("RecibirMensaje", (user, mensaje) => {
+
+                let li = $("<li>", { "class": "list-group-item" });
+                // let small = $("<small>", { "text": user + "  -  " });
+                let small = user + " - ";
+                li.append(small);
+                li.append(mensaje);
+
+                $("#Mensajes").append(li);
+
+            });
+
+            // connection.on("ShowWho", (message) => {
+            //     var message = "<div><b>" + message + "</b></div>";
+            //     document.getElementById("notificacions").innerHTML = message + document.getElementById("notifications").innerHTML;
+            // }
+
+        });
+
+    </script>
+
+}
