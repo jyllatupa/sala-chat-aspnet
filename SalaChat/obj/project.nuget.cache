@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tpF9Ur3d3ULllBaeW7Ae8xs/8M6qaetl5ZwdGTDvkedHgAl7qfeAGbjlhzbH/FA/D9ceJNrJHumAeXSLXzax1w==",
+  "dgSpecHash": "Ms2odxMs3Eg=",
   "success": true,
-  "projectFilePath": "D:\\Proyectos\\ASP.NET CORE\\SalaChat\\SalaChat\\SalaChat.csproj",
+  "projectFilePath": "D:\\Proyectos\\ASP.NET\\1_Mis Proyectos\\10.Docker_AspNet\\sala-chat-aspnet\\SalaChat\\SalaChat.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\chels\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\chels\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
@@ -75,6 +75,7 @@
     "C:\\Users\\chels\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\chels\\.nuget\\packages\\microsoft.extensions.dependencymodel\\8.0.0\\microsoft.extensions.dependencymodel.8.0.0.nupkg.sha512",
     "C:\\Users\\chels\\.nuget\\packages\\microsoft.net.stringtools\\17.8.3\\microsoft.net.stringtools.17.8.3.nupkg.sha512",
+    "C:\\Users\\chels\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.20.1\\microsoft.visualstudio.azure.containers.tools.targets.1.20.1.nupkg.sha512",
     "C:\\Users\\chels\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration\\8.0.2\\microsoft.visualstudio.web.codegeneration.8.0.2.nupkg.sha512",
     "C:\\Users\\chels\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.core\\8.0.2\\microsoft.visualstudio.web.codegeneration.core.8.0.2.nupkg.sha512",
     "C:\\Users\\chels\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.design\\8.0.2\\microsoft.visualstudio.web.codegeneration.design.8.0.2.nupkg.sha512",

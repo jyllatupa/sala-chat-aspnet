@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("932364ea-697b-4527-8a6e-71abb8a9a7b8")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("SalaChat")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9f061a7cbf3efb370901619d9f78012b0403e613")]
 [assembly: System.Reflection.AssemblyProductAttribute("SalaChat")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SalaChat")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
